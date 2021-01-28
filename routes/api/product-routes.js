@@ -8,8 +8,8 @@ router.get('/', (req, res) => {
     include: [
       Category,
       {
-        model: { Tag },
-        through: [ProductTag]
+        model: Tag,
+        through: ProductTag
       }
     ]
   })
@@ -26,8 +26,8 @@ router.get('/:id', (req, res) => {
     include: [
       Category,
       {
-        model: { Tag },
-        through: [ProductTag]
+        model: Tag,
+        through: ProductTag
       }
     ]
   })
